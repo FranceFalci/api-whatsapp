@@ -11,7 +11,10 @@ app.use( express.json() )
 // sendMessageWp( '5493813019083', ' mensaje', wpClient )
 // sendMessageWp( '5493813019603', ' mensaje', wpClient )
 app.use( '/api/wp/', wpRouter )
+app.get( '/', ( req, res ) => {
+  res.end( 'hola' )
+} )
 
-app.listen( 5996, () => {
+app.listen( 4000, () => {
   console.log( 'escuchando en puerto 5996' )
 } )
