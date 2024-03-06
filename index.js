@@ -12,6 +12,6 @@ app.use( express.json() )
 // sendMessageWp( '5493813019603', ' mensaje', wpClient )
 app.use( '/api/wp/', wpRouter )
 
-app.listen( process.env.PORT, () => {
-  console.log( `escuchando en puerto ${ process.env.PORT }` )
+app.listen( 5996, () => {
+  console.log( 'escuchando en puerto 5996' )
 } )
