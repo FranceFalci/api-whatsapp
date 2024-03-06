@@ -5,7 +5,13 @@ let client = null
 
 export const initializeClientWp = async () => {
   client = new Client( {
-    authStrategy: new wpb.LocalAuth()
+    authStrategy: new wpb.LocalAuth(),
+    puppeteer: {
+      headless: true,
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox'
+      ]
   } )
 
   client.on( 'qr', ( qr ) => {
