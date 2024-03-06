@@ -12,6 +12,7 @@ export const initializeClientWp = async () => {
         '--no-sandbox',
         '--disable-setuid-sandbox'
       ]
+    }
   } )
 
   client.on( 'qr', ( qr ) => {
